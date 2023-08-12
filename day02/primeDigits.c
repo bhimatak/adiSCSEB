@@ -2,13 +2,14 @@
 
 int isPrime(int);
 int getDigits(int);
+int checkDigit(int);
 
 
 
 int main()
 {
 
-	int i, n, temp;
+	int i, n;
 	int countN = 0;
 	scanf("%d",&n);
 
@@ -39,7 +40,7 @@ int getDigits(int num)
 	{
 		r = num%10;
 		countDigits++;
-		if(isPrime(r)==0)
+		if(checkDigit(r)==0)
 		{
 			countPFlag++;
 		}
@@ -50,6 +51,18 @@ int getDigits(int num)
 		return 1;
 	else
 		return 0;
+}
+
+int checkDigit(int num)
+{
+	int i, flag =0;
+
+	if((num == 2)||(num == 3)||(num == 5)||(num ==7))
+		flag = 0;
+	else
+		flag = 1;
+
+	return flag;	
 }
 
 int isPrime(int num)
