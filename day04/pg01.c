@@ -1,21 +1,52 @@
 #include <stdio.h>
-#define CAP 5
+#define CAP 10
 int getElem(int [], int);
 int dispArr(int [], int);
 int revArr(int [],int);
 
+int revArrPos(int [], int si, int ei);
+
+
 int main()
 {
 	int a[CAP];
+	int k,i,n, count=0;
+	int is,ie;
 	
-	getElem(a,CAP);
+	scanf("%d",&n);
 
-	dispArr(a,CAP);
+	getElem(a,n);
 
-	revArr(a,CAP);
+	scanf("%d",&k);
+	dispArr(a,n);
 
+	// revArr(a,CAP);
+	/*revArrPos(a, 0, 5);
 	printf("\nAfter Reversing\n");
 	dispArr(a,CAP);
+	revArrPos(a, 5, CAP);
+	printf("\nAfter Reversing\n");
+	dispArr(a,CAP);
+	*/
+
+	for(i=0, is=0;i<n;i++)
+	{
+		if(i%k == 0){
+			ie = i;
+			revArrPos(a, is, ie);
+			is = ie;
+		}
+		else{
+			if(i>=(n-1)){
+				revArrPos(a,is,(i+1));
+			}
+		}
+
+	}
+	printf("\nAfter Reversing\n");
+	dispArr(a,n);
+	
+
 
 	return 0;
 }
@@ -50,6 +81,31 @@ int revArr(int arr[], int n)
 		temp = arr[(n-1)-i];
 		arr[(n-1) -i] = arr[i];
 		arr[i] = temp;
+		
+	}
+}
+
+
+int revArrPos(int arr[], int is, int ie)
+{
+	int i, temp, mid;
+	int end;
+
+	end = ie-1;
+	mid = ie/2;
+
+	if(is >= mid)
+	{
+		mid = ie -1;
+		end = ie -1;
+	}
+
+	for(i=is;(i<mid)&&(i<end);i++)
+	{
+		temp = arr[i];
+		arr[i] = arr[end];
+		arr[end] = temp;
+		end--;
 		
 	}
 }
