@@ -1,0 +1,19 @@
+Language 	 :C
+Module           :Base Module
+Problem Statement: Given a string S consisting of lowercase Latin Letters. Find the first non repeating character in S.
+
+Input Format  : Take input string as S
+
+Output Format : Print the first non repeating character in S if there, otherwise print message
+"Either all characters are repeating or string is empty"
+
+Sample Input1:
+hihellohi
+Sample Output1:
+First non-repeating character is : e
+
+Sample Input2:
+hhhiii
+Sample Output2:
+Either all characters are repeating or string is empty
+

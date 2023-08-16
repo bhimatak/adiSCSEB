@@ -1,0 +1,12 @@
+Problem Statement: 
+Given a string, the task is to remove duplicates from it.
+Input format:
+First line of input contains string taken from user.
+Output format:
+Output will be an string that doesn’t contain duplicates in it.
+Constraints:
+1<=s<=100
+Input:
+Strings
+Output:
+String

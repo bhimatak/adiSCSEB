@@ -1,0 +1,9 @@
+Problem statement
+Given a String of length S, reverse the whole string without reversing 
+ the individual words in it. Words are separated by dots
+Input:
+all.the.best.
+Output:
+lla.eht.tseb.
+
+

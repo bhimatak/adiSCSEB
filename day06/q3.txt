@@ -1,0 +1,22 @@
+Problem Statement: Given two strings s1 and s2. Modify string s1 such that all the common characters of s1 and s2 is to be removed and the uncommon characters of s1 and s2 is to be concatenated
+
+Input Format : 
+First line contain s1 string
+Second line contain s2 string
+
+Output Format :
+Print string  of all uncommon characters otherwise print -1.
+
+
+Sample Input1:
+aacdb
+gafd
+Sample Output1:
+cbgf
+
+Sample Input2:
+abc
+abc
+Sample Output2:
+-1
+

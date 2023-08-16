@@ -5,8 +5,12 @@ int main()
 	char name[20];
 	int i;
 	printf("\nName: ");
-	for(i=0;i<10;i++)
-		name[i]=getchar();
+	for(i=0;;i++){
+		name[i]=getc(stdin);
+		if(name[i]=='Z')
+			break;
+	}
+	name[++i]='\0';
 	// fgets(name,1024,stdin);
 	printf("\n%s",name);
 
