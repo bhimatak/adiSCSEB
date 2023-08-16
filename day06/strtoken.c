@@ -6,14 +6,13 @@ void revString(char *);
 
 int main()
 {	
-	int countDots=0;
-	char line[1024]="all.the.best";
+	char line[1024]="all.the.best.";
 	char *token = (char *)malloc(1024);
 	// scanf("%[^\n]s",line);
 	printf("\nLine: %s",line);
 	printf("\n\n");
 	token = strtok(line,".");
-	countDots=1;
+	
 	while(token != NULL)
 	{
 		revString(token);
@@ -21,7 +20,7 @@ int main()
 		token = strtok(NULL,".");
 			
 	}
-	printf("\n");
+	printf("\b ");
 	printf("\n\n");
 	return 0;
 }
