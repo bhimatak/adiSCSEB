@@ -49,7 +49,7 @@ int main()
 	printf("\nIn a while loop\n");
 	while(head)
 	{
-		printf("\nhead = %d",head->value);
+		printf("\nhead = %d \tAddress =%u",head->value,head);
 		head = head->ptr;
 
 	}
