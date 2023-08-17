@@ -13,6 +13,7 @@ void printDetails(EMP);
 void setDetails(EMP *);
 void setDetails1(EMP *, int);
 void updateDetails(EMP *,char *);
+void findNUpdate(EMP *,char *,char *,int);
 
 int main()
 {
@@ -32,6 +33,11 @@ int main()
 	// updateDetails(&e1,nName);
 	// printf("\nAfter Update new details are\n");
 	// printDetails(e1);
+	
+	findNUpdate(e1,"bhima","shankar",n);
+	for(i=0;i<n;i++)
+		printDetails(e1[i]);
+	
 	printf("\n\n");
 	return 0;
 }
@@ -66,4 +72,22 @@ void updateDetails(EMP *e, char *nName)
 {
 	strcpy(e->name,nName);
 	printf("\nUpdated the record\n");
+}
+
+void findNUpdate(EMP *e,char *sName,char *rName,int n)
+{
+	int i, flag=0;
+	for(i=0;i<n;i++,e++)
+	{
+		if(strcmp(e->name,sName)==0){
+			flag = 1;
+			break;
+		}
+	}
+	if(flag == 1){
+		strcpy(e->name,rName);
+	}
+	else
+		printf("\nNo records found\n");
+	
 }
